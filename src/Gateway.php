@@ -46,4 +46,14 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\Parampos\Message\VerifyEnrolmentRequest', $parameters);
     }
+
+    /**
+     * @param array $parameters
+     *
+     * @return AbstractRequest|\Omnipay\Common\Message\RequestInterface
+     */
+    public function paymentInquiry(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Parampos\Message\PaymentInquiryRequest', $parameters);
+    }
 }
