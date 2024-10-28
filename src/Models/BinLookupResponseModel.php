@@ -9,16 +9,16 @@ class BinLookupResponseModel extends BaseModel
         parent::__construct($abstract);
     }
 
-    public ?string $BIN;
-    public ?string $BinBaslangic;
-    public ?string $BinBitis;
-    public ?string $BinUzunluk;
-    public ?string $SanalPOS_ID;
-    public ?string $Kart_Banka;
-    public ?string $DKK;
-    public ?string $Kart_Tip;
-    public ?string $Kart_Org;
-    public ?string $Banka_Kodu;
-    public ?string $Kart_Ticari;
+    public mixed $BIN;
+    public mixed $BinBaslangic;
+    public mixed $BinBitis;
+    public mixed $BinUzunluk;
+    public mixed $SanalPOS_ID;
+    public mixed $Kart_Banka;
+    public mixed $DKK;
+    public mixed $Kart_Tip;
+    public mixed $Kart_Org;
+    public mixed $Banka_Kodu;
+    public mixed $Kart_Ticari;
     public mixed $Kart_Marka;
 }
