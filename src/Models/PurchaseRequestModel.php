@@ -117,12 +117,12 @@ class PurchaseRequestModel extends BaseModel
 
     public function setKKSKAy(string $KK_SK_Ay): void
     {
-        $this->KK_SK_Ay = (int)mb_substr(trim($KK_SK_Ay), -2, 'UTF-8');
+        $this->KK_SK_Ay = (int)substr(trim($KK_SK_Ay), -2);
     }
 
     public function setKKSKYil(string $KK_SK_Yil): void
     {
-        $this->KK_SK_Yil = (int)mb_substr(trim($KK_SK_Yil), -2, 'UTF-8');
+        $this->KK_SK_Yil = substr(trim($KK_SK_Yil), -2);
     }
 
     public function setKKCVC(string $KK_CVC): void
@@ -132,7 +132,7 @@ class PurchaseRequestModel extends BaseModel
 
     public function setKKSahibiGSM(string $KK_Sahibi_GSM): void
     {
-        $this->KK_Sahibi_GSM = mb_substr(trim($KK_Sahibi_GSM), -10, 'UTF-8');
+        $this->KK_Sahibi_GSM = substr(trim($KK_Sahibi_GSM), -10);
     }
 
     public function setHataURL(string $Hata_URL): void
