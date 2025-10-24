@@ -31,7 +31,7 @@ class BinLookupRequest extends RemoteAbstractRequest
 
         if ($this->getTestMode()) {
 
-            $this->endpoint = 'https://test-dmz.param.com.tr:4443/turkpos.ws/service_turkpos_test.asmx?WSDL';
+            $this->endpoint = 'https://testposws.param.com.tr/turkpos.ws/service_turkpos_prod.asmx?wsdl';
 
         }
 
@@ -41,7 +41,7 @@ class BinLookupRequest extends RemoteAbstractRequest
                 'CLIENT_USERNAME' => $this->getClientUsername(),
                 'CLIENT_PASSWORD' => $this->getClientPassword(),
             ]),
-            'BIN' => substr($this->getCard()->getNumber(), 0, 6),
+            'BIN' => mb_substr($this->getCard()->getNumber(), 0, 6, 'UTF-8'),
         ]);
     }
 

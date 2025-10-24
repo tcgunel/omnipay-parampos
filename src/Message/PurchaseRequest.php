@@ -44,7 +44,7 @@ class PurchaseRequest extends RemoteAbstractRequest
 
         if ($this->getTestMode()) {
 
-            $this->endpoint = 'https://test-dmz.param.com.tr:4443/turkpos.ws/service_turkpos_test.asmx?WSDL';
+            $this->endpoint = 'https://testposws.param.com.tr/turkpos.ws/service_turkpos_prod.asmx?wsdl';
 
         }
 

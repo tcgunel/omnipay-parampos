@@ -102,57 +102,57 @@ class PurchaseRequestModel extends BaseModel
 
     public function setGUID(string $GUID): void
     {
-        $this->GUID = substr(trim($GUID), 0, 36);
+        $this->GUID = mb_substr(trim($GUID), 0, 36, 'UTF-8');
     }
 
     public function setKKSahibi(string $KK_Sahibi): void
     {
-        $this->KK_Sahibi = substr(trim($KK_Sahibi), 0, 100);
+        $this->KK_Sahibi = mb_substr(trim($KK_Sahibi), 0, 100, 'UTF-8');
     }
 
     public function setKKNo(string $KK_No): void
     {
-        $this->KK_No = substr(trim($KK_No), 0, 16);
+        $this->KK_No = mb_substr(trim($KK_No), 0, 16, 'UTF-8');
     }
 
     public function setKKSKAy(string $KK_SK_Ay): void
     {
-        $this->KK_SK_Ay = (int)substr(trim($KK_SK_Ay), -2);
+        $this->KK_SK_Ay = (int)mb_substr(trim($KK_SK_Ay), -2, 'UTF-8');
     }
 
     public function setKKSKYil(string $KK_SK_Yil): void
     {
-        $this->KK_SK_Yil = (int)substr(trim($KK_SK_Yil), -2);
+        $this->KK_SK_Yil = (int)mb_substr(trim($KK_SK_Yil), -2, 'UTF-8');
     }
 
     public function setKKCVC(string $KK_CVC): void
     {
-        $this->KK_CVC = substr(trim($KK_CVC), 0, 3);
+        $this->KK_CVC = mb_substr(trim($KK_CVC), 0, 3, 'UTF-8');
     }
 
     public function setKKSahibiGSM(string $KK_Sahibi_GSM): void
     {
-        $this->KK_Sahibi_GSM = substr(trim($KK_Sahibi_GSM), -10);
+        $this->KK_Sahibi_GSM = mb_substr(trim($KK_Sahibi_GSM), -10, 'UTF-8');
     }
 
     public function setHataURL(string $Hata_URL): void
     {
-        $this->Hata_URL = substr(trim($Hata_URL), 0, 256);
+        $this->Hata_URL = mb_substr(trim($Hata_URL), 0, 256, 'UTF-8');
     }
 
     public function setBasariliURL(string $Basarili_URL): void
     {
-        $this->Basarili_URL = substr(trim($Basarili_URL), 0, 256);
+        $this->Basarili_URL = mb_substr(trim($Basarili_URL), 0, 256, 'UTF-8');
     }
 
     public function setSiparisID(string $Siparis_ID): void
     {
-        $this->Siparis_ID = substr(trim($Siparis_ID), 0, 50);
+        $this->Siparis_ID = mb_substr(trim($Siparis_ID), 0, 50, 'UTF-8');
     }
 
     public function setSiparisAciklama(string $Siparis_Aciklama): void
     {
-        $this->Siparis_Aciklama = substr(trim($Siparis_Aciklama), 0, 250);
+        $this->Siparis_Aciklama = mb_substr(trim($Siparis_Aciklama), 0, 250, 'UTF-8');
     }
 
     public function setTaksit(int $Taksit): void
@@ -187,11 +187,11 @@ class PurchaseRequestModel extends BaseModel
 
     public function setIPAdr(string $IPAdr): void
     {
-        $this->IPAdr = substr(trim($IPAdr), 0, 50);
+        $this->IPAdr = mb_substr(trim($IPAdr), 0, 50, 'UTF-8');
     }
 
     public function setRefURL(string $Ref_URL): void
     {
-        $this->Ref_URL = substr(trim($Ref_URL), 0, 256);
+        $this->Ref_URL = mb_substr(trim($Ref_URL), 0, 256, 'UTF-8');
     }
 }
