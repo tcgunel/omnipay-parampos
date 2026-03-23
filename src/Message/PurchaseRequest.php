@@ -49,30 +49,30 @@ class PurchaseRequest extends RemoteAbstractRequest
         }
 
         return new PurchaseRequestModel([
-            'G'                  => new GModel([
-                'CLIENT_CODE'     => $this->getClientCode(),
+            'G' => new GModel([
+                'CLIENT_CODE' => $this->getClientCode(),
                 'CLIENT_USERNAME' => $this->getClientUsername(),
                 'CLIENT_PASSWORD' => $this->getClientPassword(),
             ]),
-            'GUID'               => $this->getGuid(),
-            'KK_Sahibi'          => $this->getCard()->getName(),
-            'KK_No'              => $this->getCard()->getNumber(),
-            'KK_SK_Ay'           => $this->getCard()->getExpiryMonth(),
-            'KK_SK_Yil'          => $this->getCard()->getExpiryYear(),
-            'KK_CVC'             => $this->getCard()->getCvv(),
-            'KK_Sahibi_GSM'      => $this->getCard()->getPhone(),
-            'Hata_URL'           => $this->getCancelUrl(),
-            'Basarili_URL'       => $this->getReturnUrl(),
-            'Siparis_ID'         => $this->getTransactionId(),
-            'Siparis_Aciklama'   => '',
-            'Taksit'             => $this->getInstallment(),
-            'Islem_Tutar'        => $this->getAmount(),
-            'Toplam_Tutar'       => $this->getAmount(),
-            'Islem_Hash'         => '',
+            'GUID' => $this->getGuid(),
+            'KK_Sahibi' => $this->getCard()->getName(),
+            'KK_No' => $this->getCard()->getNumber(),
+            'KK_SK_Ay' => $this->getCard()->getExpiryMonth(),
+            'KK_SK_Yil' => $this->getCard()->getExpiryYear(),
+            'KK_CVC' => $this->getCard()->getCvv(),
+            'KK_Sahibi_GSM' => $this->getCard()->getPhone(),
+            'Hata_URL' => $this->getCancelUrl(),
+            'Basarili_URL' => $this->getReturnUrl(),
+            'Siparis_ID' => $this->getTransactionId(),
+            'Siparis_Aciklama' => '',
+            'Taksit' => $this->getInstallment(),
+            'Islem_Tutar' => $this->getAmount(),
+            'Toplam_Tutar' => $this->getAmount(),
+            'Islem_Hash' => '',
             'Islem_Guvenlik_Tip' => $this->getSecure() ? PaymentType::SECURE : PaymentType::NON_SECURE,
-            'Islem_ID'           => '',
-            'IPAdr'              => $this->getClientIp(),
-            'Ref_URL'            => '',
+            'Islem_ID' => '',
+            'IPAdr' => $this->getClientIp(),
+            'Ref_URL' => '',
         ]);
     }
 
@@ -89,7 +89,7 @@ class PurchaseRequest extends RemoteAbstractRequest
                 $purchase_request_model->Islem_Tutar .
                 $purchase_request_model->Toplam_Tutar .
                 $purchase_request_model->Siparis_ID,
-            'G'    => $purchase_request_model->G,
+            'G' => $purchase_request_model->G,
         ]);
     }
 

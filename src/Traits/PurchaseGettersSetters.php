@@ -9,49 +9,49 @@ trait PurchaseGettersSetters
         return $this->setParameter('clientUsername', $value);
     }
 
-	public function getClientUsername()
-	{
-		return $this->getParameter('clientUsername');
-	}
+    public function getClientUsername()
+    {
+        return $this->getParameter('clientUsername');
+    }
 
     public function setClientPassword($value)
     {
         return $this->setParameter('clientPassword', $value);
     }
 
-	public function getClientPassword()
-	{
-		return $this->getParameter('clientPassword');
-	}
+    public function getClientPassword()
+    {
+        return $this->getParameter('clientPassword');
+    }
     public function setClientCode($value)
     {
         return $this->setParameter('clientCode', $value);
     }
 
-	public function getClientCode()
-	{
-		return $this->getParameter('clientCode');
-	}
+    public function getClientCode()
+    {
+        return $this->getParameter('clientCode');
+    }
 
     public function setGuid($value)
     {
         return $this->setParameter('guid', $value);
     }
 
-	public function getGuid()
-	{
-		return $this->getParameter('guid');
-	}
+    public function getGuid()
+    {
+        return $this->getParameter('guid');
+    }
 
     public function setSecure($value)
     {
         return $this->setParameter('secure', $value);
     }
 
-	public function getSecure()
-	{
-		return $this->getParameter('secure');
-	}
+    public function getSecure()
+    {
+        return $this->getParameter('secure');
+    }
 
     public function getEndpoint()
     {

@@ -2,8 +2,6 @@
 
 namespace Omnipay\Parampos\Message;
 
-use Omnipay\Common\Exception\InvalidCreditCardException;
-use Omnipay\Parampos\Helpers\Helper;
 use Omnipay\Parampos\Models\GModel;
 use Omnipay\Parampos\Models\PaymentInquiryRequestModel;
 use Omnipay\Parampos\Models\VerifyEnrolmentRequestModel;
@@ -36,12 +34,12 @@ class PaymentInquiryRequest extends RemoteAbstractRequest
         }
 
         return new VerifyEnrolmentRequestModel([
-            'G'          => new GModel([
-                'CLIENT_CODE'     => $this->getClientCode(),
+            'G' => new GModel([
+                'CLIENT_CODE' => $this->getClientCode(),
                 'CLIENT_USERNAME' => $this->getClientUsername(),
                 'CLIENT_PASSWORD' => $this->getClientPassword(),
             ]),
-            'GUID'       => $this->getGuid(),
+            'GUID' => $this->getGuid(),
             'Siparis_ID' => $this->getTransactionId(),
         ]);
     }

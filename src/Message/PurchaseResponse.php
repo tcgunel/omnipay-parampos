@@ -13,7 +13,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     {
         parent::__construct($request, $data);
 
-        $this->data = new PurchaseResponseModel((array)$data->TP_WMD_UCDResult);
+        $this->data = new PurchaseResponseModel((array) $data->TP_WMD_UCDResult);
     }
 
     public function isSuccessful(): bool
@@ -33,8 +33,8 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
 
     public function getRedirectUrl()
     {
-    	/** @var PurchaseRequest $request */
-    	$request = $this->getRequest();
+        /** @var PurchaseRequest $request */
+        $request = $this->getRequest();
 
         return $request->getEndpoint();
     }
@@ -44,13 +44,13 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
         return 'POST';
     }
 
-	public function getRedirectResponse()
-	{
-		$response = parent::getRedirectResponse();
+    public function getRedirectResponse()
+    {
+        $response = parent::getRedirectResponse();
 
-		$response->setContent($this->data->UCD_HTML);
+        $response->setContent($this->data->UCD_HTML);
 
-		return $response;
-	}
+        return $response;
+    }
 
 }

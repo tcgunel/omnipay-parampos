@@ -13,58 +13,58 @@ use Psr\Http\Message\ResponseInterface;
  */
 abstract class RemoteAbstractResponse extends AbstractResponse
 {
-	protected $response;
+    protected $response;
 
-	protected $request;
+    protected $request;
 
-	/**
-	 * @throws OmnipayParamposHashValidationException
-	 */
-	public function __construct(RequestInterface $request, $data)
-	{
-		parent::__construct($request, $data);
+    /**
+     * @throws OmnipayParamposHashValidationException
+     */
+    public function __construct(RequestInterface $request, $data)
+    {
+        parent::__construct($request, $data);
 
-		$this->request = $request;
+        $this->request = $request;
 
-		$this->response = $data;
+        $this->response = $data;
 
-		if ($data instanceof ResponseInterface) {
+        if ($data instanceof ResponseInterface) {
 
-			$body = (string)$data->getBody();
+            $body = (string) $data->getBody();
 
-			try {
+            try {
 
-				$this->response = json_decode($body, true, 512, JSON_THROW_ON_ERROR);
+                $this->response = json_decode($body, true, 512, JSON_THROW_ON_ERROR);
 
-			} catch (\JsonException $e) {
+            } catch (\JsonException $e) {
 
-				$this->response = (array)simplexml_load_string($body);
+                $this->response = (array) simplexml_load_string($body);
 
-			}
+            }
 
-			if (!$this->validateHash()) {
+            if (!$this->validateHash()) {
 
-				throw new OmnipayParamposHashValidationException(
-					"Hash validation after request failed ! Might be a security issue."
-				);
+                throw new OmnipayParamposHashValidationException(
+                    'Hash validation after request failed ! Might be a security issue.'
+                );
 
-			}
+            }
 
-		}
-	}
+        }
+    }
 
-	private function validateHash(): bool
-	{
-		$hash_string = ($this->response["orderId"] ?? "") .
-			($this->response["result"] ?? "") .
-			($this->response["amount"] ?? "") .
-			($this->response["mode"] ?? "") .
-			($this->response["errorCode"] ?? "") .
-			($this->response["errorMessage"] ?? "") .
-			($this->response["transactionDate"] ?? "") .
-			$this->request->getParameters()["publicKey"] .
-			$this->request->getParameters()["privateKey"];
+    private function validateHash(): bool
+    {
+        $hash_string = ($this->response['orderId'] ?? '') .
+            ($this->response['result'] ?? '') .
+            ($this->response['amount'] ?? '') .
+            ($this->response['mode'] ?? '') .
+            ($this->response['errorCode'] ?? '') .
+            ($this->response['errorMessage'] ?? '') .
+            ($this->response['transactionDate'] ?? '') .
+            $this->request->getParameters()['publicKey'] .
+            $this->request->getParameters()['privateKey'];
 
-		return $this->response["hash"] === Helper::hash(null, $hash_string);
-	}
+        return $this->response['hash'] === Helper::hash(null, $hash_string);
+    }
 }

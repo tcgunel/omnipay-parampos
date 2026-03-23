@@ -30,7 +30,7 @@ class BinLookupResponse extends AbstractResponse
     public function getData(): ?BinLookupResponseModel
     {
         if (! empty($this->data['DT_Bilgi']['any'])) {
-            preg_match('/<Temp.*?<BIN>'.$this->request->getData()->BIN.'<\/BIN>.*?<\/Temp>/i', $this->data['DT_Bilgi']['any'], $temp);
+            preg_match('/<Temp.*?<BIN>' . $this->request->getData()->BIN . '<\/BIN>.*?<\/Temp>/i', $this->data['DT_Bilgi']['any'], $temp);
             if (! empty($temp[0])) {
 
                 $temp[0] = preg_replace('/<Temp.*?>/i', '<Temp>', $temp[0]);

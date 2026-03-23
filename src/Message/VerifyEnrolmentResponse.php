@@ -12,7 +12,7 @@ class VerifyEnrolmentResponse extends AbstractResponse
     {
         parent::__construct($request, $data);
 
-        $this->data = new VerifyEnrolmentResponseModel((array)$data->TP_WMD_PayResult);
+        $this->data = new VerifyEnrolmentResponseModel((array) $data->TP_WMD_PayResult);
     }
 
     public function isSuccessful(): bool

@@ -4,7 +4,6 @@ namespace Omnipay\Parampos\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
 
 class PaymentInquiryResponse extends AbstractResponse
 {
@@ -17,7 +16,7 @@ class PaymentInquiryResponse extends AbstractResponse
 
     public function isSuccessful(): bool
     {
-        return (int)$this->data['Sonuc'] > 0 && (int)$this->data['DT_Bilgi']['Odeme_Sonuc'] === 1;
+        return (int) $this->data['Sonuc'] > 0 && (int) $this->data['DT_Bilgi']['Odeme_Sonuc'] === 1;
     }
 
     public function getMessage()

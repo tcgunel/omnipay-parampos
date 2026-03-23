@@ -117,7 +117,7 @@ class PurchaseRequestModel extends BaseModel
 
     public function setKKSKAy(string $KK_SK_Ay): void
     {
-        $this->KK_SK_Ay = (int)substr(trim($KK_SK_Ay), -2);
+        $this->KK_SK_Ay = (int) substr(trim($KK_SK_Ay), -2);
     }
 
     public function setKKSKYil(string $KK_SK_Yil): void
