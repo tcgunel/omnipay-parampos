@@ -11,7 +11,7 @@ class PurchaseResponseModel extends BaseModel
 
     /**
      * Sonuc parametresi “0” dan büyükse, 3D Güvenli Ödeme işlemini başlatmak için UCD_HTML içeriğini ekrana bastırınız.
-     * @var
+     * @var mixed
      */
     public string $Sonuc;
     public string $Sonuc_Str;

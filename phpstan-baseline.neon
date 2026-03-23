@@ -71,6 +71,6 @@ parameters:
 			path: src/Models/PurchaseRequestModel.php
 
 		-
-			message: "#^PHPDoc tag @var has invalid value \\(\\)\\: Unexpected token \"\\\\n     \", expected type at offset 152$#"
+			message: "#^PHPDoc tag @var for property Omnipay\\\\Parampos\\\\Models\\\\PurchaseResponseModel\\:\\:\\$Sonuc with type mixed is not subtype of native type string\\.$#"
 			count: 1
 			path: src/Models/PurchaseResponseModel.php
