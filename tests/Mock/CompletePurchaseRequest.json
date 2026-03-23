@@ -1,0 +1,12 @@
+{
+  "clientUsername": "test@parampos.com",
+  "clientPassword": "testPass123",
+  "clientCode": "12345",
+  "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "testMode": true,
+
+  "transactionId": "PARAM-ORD-20240101001",
+  "md": "mdValue123456789",
+  "islemGUID": "islem-guid-a1b2c3d4",
+  "mdStatus": "1"
+}

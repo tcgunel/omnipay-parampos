@@ -1,0 +1,9 @@
+{
+  "clientUsername": "test@parampos.com",
+  "clientPassword": "testPass123",
+  "clientCode": "12345",
+  "testMode": true,
+  "card": {
+    "number": "123"
+  }
+}

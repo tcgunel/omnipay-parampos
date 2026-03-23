@@ -1,0 +1,29 @@
+{
+  "clientUsername": "test@parampos.com",
+  "clientPassword": "testPass123",
+  "clientCode": "12345",
+  "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "testMode": true,
+  "secure": true,
+
+  "transactionId": "PARAM-ORD-20240101001",
+  "amount": 250.50,
+  "installment": 1,
+
+  "card": {
+    "firstName": "Mehmet",
+    "lastName": "Demir",
+    "number": "5456165456165454",
+    "expiryMonth": "03",
+    "expiryYear": "2030",
+    "cvv": "456",
+    "phone": "05551234567",
+    "billingAddress1": "Istiklal Cad. No:42",
+    "billingCity": "Istanbul",
+    "billingPostcode": "34433",
+    "billingCountry": "TR"
+  },
+  "clientIp": "192.168.1.100",
+  "returnUrl": "https://example.com/payment/success",
+  "cancelUrl": "https://example.com/payment/fail"
+}

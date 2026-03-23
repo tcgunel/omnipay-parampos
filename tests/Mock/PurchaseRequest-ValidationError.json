@@ -1,0 +1,9 @@
+{
+  "clientUsername": "test@parampos.com",
+  "clientPassword": "testPass123",
+  "clientCode": "12345",
+  "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "testMode": true,
+
+  "amount": 250.50
+}
